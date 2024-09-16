@@ -1,0 +1,27 @@
+{
+    "name": "bun-elysia-prisma",
+    "module": "index.ts",
+    "type": "module",
+    "scripts": {
+        "dev": "bun --watch src/index.ts",
+        "build": "bun build src/index.ts --target bun --outdir ./dist",
+        "start": "NODE_ENV=production bun dist/index.js",
+        "test": "bun test",
+        "format": "prettier --write .",
+        "check": "prettier --check ."
+    },
+    "devDependencies": {
+        "@types/bun": "latest",
+        "prisma": "^5.19.1"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "@elysiajs/cors": "^1.1.1",
+        "@prisma/client": "^5.19.1",
+        "dotenv": "^16.4.5",
+        "elysia": "^1.1.12",
+        "prettier": "^3.3.3"
+    }
+}
